@@ -23,16 +23,16 @@
     "extra": {
         "laravel": {
             "providers": [
-                "KyleAtDND\\GridPane\\Providers\\GridpaneServiceProvider"
+                "KyleAtDND\\Gridpane\\Providers\\GridpaneServiceProvider"
             ],
             "aliases": {
-                "GridPane": "KyleAtDND\\GridPane\\Facades\\GridPane"
+                "Gridpane": "KyleAtDND\\Gridpane\\Facades\\Gridpane"
             }
         }
     },
     "autoload": {
         "psr-4": {
-            "KyleAtDND\\GridPane\\": "src"
+            "KyleAtDND\\Gridpane\\": "src"
         }
     }
 }
