@@ -9,17 +9,17 @@ class GridPaneService {
 
     /**
      * Get auth parameters from config, fail if any are missing.
-     * Instantiate API client and set auth token.
+     * Instantiate API client and set auth bearer token.
      *
      * @throws Exception
      */
     public function __construct() {
-        $this->token = config('gridpane-laravel.token');
-        if(!$this->token) {
-            throw new InvalidArgumentException('Please set GP_TOKEN environment variables.');
+        $this->bearer = config('gridpane-laravel.bearer');
+        if(!$this->bearer) {
+            throw new InvalidArgumentException('Please set GP_BEARER environment variables.');
         }
         $this->client = new HttpClient();
-        $this->client->withToken($this->token);
+        $this->client->setAuth('bearer', ['bearer' => $this->bearer]);
     }
 
     /**

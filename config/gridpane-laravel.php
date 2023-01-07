@@ -12,6 +12,6 @@ return [
     */
 
     'driver' => env('GP_DRIVER', 'api'),
-    'token' => env('GP_TOKEN'),
+    'bearer' => env('GP_BEARER'),
 
 ];
