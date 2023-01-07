@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "KyleAtDND\\GridPane\\Providers\\GridPaneServiceProvider"
+                "KyleAtDND\\GridPane\\Providers\\GridpaneServiceProvider"
             ],
             "aliases": {
                 "GridPane": "KyleAtDND\\GridPane\\Facades\\GridPane"
