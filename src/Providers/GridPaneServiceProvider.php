@@ -3,7 +3,7 @@
 namespace KyleAtDND\GridPane\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use KyleAtDND\GridPane\Services\GridpaneService;
+use KyleAtDND\GridPane\Services\GridPaneService;
 use KyleAtDND\GridPane\Services\NullService;
 
 class GridPaneServiceProvider extends ServiceProvider
