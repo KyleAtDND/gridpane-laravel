@@ -15,13 +15,14 @@ class GridPaneService
      *
      * @throws Exception
      */
-    public function __construct()
-    {
+    public function __construct(
+        public $client = new HttpClient(),
+        private string $bearer = '',
+    ) {
         $this->bearer = config('gridpane-laravel.bearer');
         if (! $this->bearer) {
             throw new InvalidArgumentException('Please set GP_BEARER environment variables.');
         }
-        $this->client = new HttpClient();
         $this->client->setAuth('bearer', ['bearer' => $this->bearer]);
     }
 
