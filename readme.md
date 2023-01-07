@@ -54,22 +54,18 @@ The `GridPane` facade acts as a wrapper for an instance of the `GridPane\API\Cli
 // Get all tickets
 GridPane::tickets()->findAll();
 
-// Create a new ticket
-GridPane::tickets()->create([
-  'subject' => 'Subject',
-  'comment' => [
-      'body' => 'Ticket content.'
-  ],
-  'priority' => 'normal'
+// Create a new server
+$newServer = $client->servers()->create([
+    'servername' => 'hal9000',                          
+    'ip' => '199.199.199.199',                        
+    'datacenter' => 'space-station-v',                     
+    'webserver' => 'nginx',      
+    'database' => 'percona'
 ]);
-
-// Update multiple tickets
-GridPane::ticket([123, 456])->update([
-  'status' => 'urgent'
-]);
+print_r($newServer);
 
 // Delete a ticket
-GridPane::ticket(123)->delete();
+GridPane::server(12345)->delete();
 ```
 
 ### Dependency injection
