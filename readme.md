@@ -51,11 +51,11 @@ Set this to `null` or `log` to prevent calling the GridPane API directly from yo
 The `GridPane` facade acts as a wrapper for an instance of the `GridPane\API\Client` class. Any methods available on this class ([documentation here](https://github.com/kyleatdnd/gridpane-api-client-php#usage)) are available through the facade. for example:
 
 ```php
-// Get all tickets
-GridPane::tickets()->findAll();
+// Get all Servers
+GridPane::server()->findAll();
 
 // Create a new server
-$newServer = $client->servers()->create([
+$newServer = $client->server()->create([
     'servername' => 'hal9000',                          
     'ip' => '199.199.199.199',                        
     'datacenter' => 'space-station-v',                     
@@ -64,7 +64,7 @@ $newServer = $client->servers()->create([
 ]);
 print_r($newServer);
 
-// Delete a ticket
+// Delete a server
 GridPane::server(12345)->delete();
 ```
 
