@@ -1,10 +1,10 @@
 <?php
 
-namespace KyleAtDND\GridPane\Providers;
+namespace KyleAtDND\Gridpane\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use KyleAtDND\GridPane\Services\GridPaneService;
-use KyleAtDND\GridPane\Services\NullService;
+use KyleAtDND\Gridpane\Services\GridpaneService;
+use KyleAtDND\Gridpane\Services\NullService;
 
 class GridpaneServiceProvider extends ServiceProvider
 {
@@ -41,13 +41,13 @@ class GridpaneServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind('GridPane', function () {
+        $this->app->bind('Gridpane', function () {
             $driver = config('gridpane-laravel.driver', 'api');
             if (is_null($driver) || $driver === 'log') {
                 return new NullService($driver === 'log');
             }
 
-            return new GridPaneService;
+            return new GridpaneService;
         });
     }
 }
