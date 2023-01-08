@@ -42,6 +42,10 @@ The API access token. You can create one at: `https://my.gridpane.com/settings`
 
 Set this to `null` or `log` to prevent calling the GridPane API directly from your environment.
 
+## Contributing
+
+If you have any questions/problems/request with the SDK (the GridPaneService class), please go to the [GridPane PHP SDK repository](https://github.com/KyleWLawrence/gridpane-api-client-php) with those requests. Pull Requests for the Laravel wrapper are always welcome here. I'll catch-up and develop the contribution guidelines soon. For the meantime, just open and issue or create a pull request.
+
 ## Usage
 
 ### Facade
