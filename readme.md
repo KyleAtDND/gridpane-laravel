@@ -2,7 +2,7 @@
 
 This package provides integration with the GridPane API. It supports creating servers, retrieving and updating sites, deleting domains, etc.
 
-The package simply provides a `GridPane` facade that acts as a wrapper to the [kyleatdnd/gridpane-api-client-php](https://github.com/kyleatdnd/gridpane-api-client-php) package.
+The package simply provides a `GridPane` facade that acts as a wrapper to the [kylewlawrence/gridpane-api-client-php](https://github.com/kylewlawrence/gridpane-api-client-php) package.
 
 **NB:** Currently only supports bearer token-based authentication.
 
@@ -11,7 +11,7 @@ The package simply provides a `GridPane` facade that acts as a wrapper to the [k
 You can install this package via Composer using:
 
 ```bash
-composer require kyleatdnd/gridpane-api-client-php
+composer require kylewlawrence/gridpane-api-client-php
 ```
 
 If you want to make use of the facade you must install it as well.
@@ -20,19 +20,17 @@ If you want to make use of the facade you must install it as well.
 // config/app.php
 'aliases' => [
     ..
-    'GridPane' => KyleAtDND\GridPane\Facades\GridPane::class,
+    'GridPane' => KyleWLawrence\GridPane\Facades\GridPane::class,
 ];
 ```
 
 ## Configuration
 
-
 To publish the config file to `app/config/gridpane-laravel.php` run:
 
 ```bash
-php artisan vendor:publish --provider="KyleAtDND\GridPane\Providers\GridPaneServiceProvider"
+php artisan vendor:publish --provider="KyleWLawrence\GridPane\Providers\GridPaneServiceProvider"
 ```
-
 
 Set your configuration using **environment variables**, either in your `.env` file or on your server's control panel:
 
@@ -48,11 +46,11 @@ Set this to `null` or `log` to prevent calling the GridPane API directly from yo
 
 ### Facade
 
-The `GridPane` facade acts as a wrapper for an instance of the `GridPane\API\Client` class. Any methods available on this class ([documentation here](https://github.com/kyleatdnd/gridpane-api-client-php#usage)) are available through the facade. for example:
+The `GridPane` facade acts as a wrapper for an instance of the `GridPane\API\Client` class. Any methods available on this class ([documentation here](https://github.com/kylewlawrence/gridpane-api-client-php#usage)) are available through the facade. for example:
 
 ```php
 // Get all Servers
-GridPane::server()->findAll();
+GridPane::server()->getAll();
 
 // Create a new server
 $newServer = $client->server()->create([
@@ -70,12 +68,12 @@ GridPane::server(12345)->delete();
 
 ### Dependency injection
 
-If you'd prefer not to use the facade, you can skip adding the alias to `config/app.php` and instead inject `KyleAtDND\GridPane\Services\GridPaneService` into your class. You can then use all of the same methods on this object as you would on the facade.
+If you'd prefer not to use the facade, you can skip adding the alias to `config/app.php` and instead inject `KyleWLawrence\GridPane\Services\GridPaneService` into your class. You can then use all of the same methods on this object as you would on the facade.
 
 ```php
 <?php
 
-use KyleAtDND\GridPane\Services\GridPaneService;
+use KyleWLawrence\GridPane\Services\GridPaneService;
 
 class MyClass {
 
@@ -84,7 +82,7 @@ class MyClass {
     }
 
     public function getSite() {
-        $this->gridpane_service->sites()->find(1);
+        $this->gridpane_service->site()->geti(12345);
     }
 
 }
