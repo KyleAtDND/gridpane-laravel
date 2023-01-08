@@ -1,6 +1,6 @@
 <?php
 
-namespace KyleAtDND\GridPane\Services;
+namespace KyleWLawrence\GridPane\Services;
 
 use BadMethodCallException;
 use Config;

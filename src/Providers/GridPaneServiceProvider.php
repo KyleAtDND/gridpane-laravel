@@ -1,10 +1,10 @@
 <?php
 
-namespace KyleAtDND\GridPane\Providers;
+namespace KyleWLawrence\GridPane\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use KyleAtDND\GridPane\Services\GridPaneService;
-use KyleAtDND\GridPane\Services\NullService;
+use KyleWLawrence\GridPane\Services\GridPaneService;
+use KyleWLawrence\GridPane\Services\NullService;
 
 class GridPaneServiceProvider extends ServiceProvider
 {

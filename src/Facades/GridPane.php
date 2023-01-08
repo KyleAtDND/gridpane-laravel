@@ -1,6 +1,6 @@
 <?php
 
-namespace KyleAtDND\GridPane\Facades;
+namespace KyleWLawrence\GridPane\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

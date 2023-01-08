@@ -1,11 +1,11 @@
 <?php
 
-namespace KyleAtDND\GridPane\Services;
+namespace KyleWLawrence\GridPane\Services;
 
 use Illuminate\Support\Facades\Log;
 
-class NullService {
-
+class NullService
+{
     /**
      * @var bool
      */
@@ -19,7 +19,7 @@ class NullService {
     public function __call($name, $arguments)
     {
         if ($this->logCalls) {
-            Log::debug('Called KyleAtDND GridPane facade method: '.$name.' with:', $arguments);
+            Log::debug('Called GridPane facade method: '.$name.' with:', $arguments);
 
             return new self;
         }
