@@ -86,7 +86,7 @@ class MyClass {
     }
 
     public function getSite() {
-        $this->gridpane_service->site()->geti(12345);
+        $this->gridpane_service->site()->get(12345);
     }
 
 }
