@@ -4,8 +4,8 @@ namespace KyleWLawrence\GridPane\Services;
 
 use BadMethodCallException;
 use Config;
-use GridPane\Api\HttpClient;
 use InvalidArgumentException;
+use KyleWLawrence\GridPane\Api\HttpClient;
 
 class GridPaneService
 {
