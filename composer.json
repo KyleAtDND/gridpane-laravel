@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
-        "illuminate/support": "^8.0|^9.0",
+        "php": ">=8.2",
+        "illuminate/support": ">=8.0",
         "kylewlawrence/gridpane-api-client-php": "^1.0"
     },
     "extra": {
