@@ -2,7 +2,7 @@
     "name": "kylewlawrence/gridpane-laravel",
     "type": "library",
     "description": "Laravel wrapper for kylewlawrence/gridpane-api-client-php package",
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "keywords": [
         "gridpane",
         "laravel"
